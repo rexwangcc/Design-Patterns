@@ -7,6 +7,7 @@ public class CurrentConditionsDisplay implements DisplayElement, Observer{
 	private Subject weatherData;
 	
 	public CurrentConditionsDisplay(Subject weatherData){
+		// It would be handy if we have a reference to the Subject here to the Subject for unregistering
 		this.weatherData = weatherData;
 		//Magic of Observer Registration Below!!
 		weatherData.registerObserver(this);
@@ -25,8 +26,7 @@ public class CurrentConditionsDisplay implements DisplayElement, Observer{
 	@Override
 	public void display() {
 		// TODO Auto-generated method stub
-		System.out.println("Current conditions: " + temperature 
-				+ "F degrees and " + humidity + "% humidity");
+		System.out.println("CurrentConditions: " + temperature + "F degress and " + humidity + "% humidity");
 	}
 
 }
