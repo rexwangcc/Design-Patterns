@@ -129,6 +129,8 @@ public class Main {
 
 I. Use Synchronization:
 
+```java
+
 public class Chicken {
     String description;
 
@@ -145,6 +147,7 @@ public class Chicken {
         return uniqueInstance;
     }
 }
+```
 
 II. Move to an eagerly created instance ranther than a lzily created one by:
 
