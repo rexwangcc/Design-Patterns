@@ -197,3 +197,26 @@ public class Chicken {
 * Also, be careful about classloaders when using Singleton.
 
 * In Java 1.2 JVM, the bugs of garbage collector will "eat" the reference of Singleton!
+
+
+### `Command`
+
+* The Command Pattern encapsulates a request as an object, thereby letting you parameterize other objects with different requests, queue or log requests, and support undoable operations.
+
+* An example of a `Null Object`:
+
+```java
+public interface Command{
+    public void execute(){
+        //To do something
+    }
+}
+
+public class NoCommand implements Command{
+    public void execute(){
+        //Nothing
+    }
+}
+
+```
+
