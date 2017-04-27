@@ -2,13 +2,14 @@
 
 ## Design Principles
 >
-1. Identify the aspects of your application that vary and separate them from what stays the saem.
+1. Identify the aspects of your application that vary and separate them from what stays the same.
 2. Program to an interface, not an implementation.
 3. Favor composition over inheritance.
 4. Strive for loosely coupled designes between objects that interact.
 5. Encapsulate what varies.
 6. Classes should be open for extension, but closed for modification.
 7. Depend upon abstractions, do not depend upon conrete classes.
+8. Principle of Least Knowledge talk only to your immediate friends. (When designing a system, for any object be careful of the numbter of classes it interacts with and also how it comes to interact with those classes)
 
 ## Design Patterns
 
@@ -224,6 +225,8 @@ public class NoCommand implements Command{
 ### `Adapter`
 
 * The Adapter Patten converts the interface of a class into another interface the clients expect. Adapter lets classes work together that counldn't otherwise because of incompatible interfaces.
+
+* The Facade Pattern provides a unified interface to a set of interfaces in a subsystem. Facade defines a higher level interface that makes the subsystem easier to use.
 
 * The Adapter Pattern’s role is to convert one interface into another, how the client uses the Adapter:
 > The client makes a request to the
