@@ -10,12 +10,13 @@
 6. Classes should be open for extension, but closed for modification.
 7. Depend upon abstractions, do not depend upon conrete classes.
 8. Principle of Least Knowledge talk only to your immediate friends. (When designing a system, for any object be careful of the numbter of classes it interacts with and also how it comes to interact with those classes)
+9. Don't call us, we'll call you. (High-level components give the low-level components this principle)
 
 ## Design Patterns
 
 ### `Strategy`
 
-* The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it.
+* The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it. (Subclasses decide how to implement steps in an algorithm)
 
 * Example: Duck Simulator
 
@@ -40,7 +41,7 @@
 
 ### `Factory`
 
-* The Factory Method Pattern defines an interface for creating an object, but lets subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses. (Use this to decouple your client code from the concrete classes you need to instantiate, or you don't know ahead of time all the concrete classes you are going to need. Just subclass Factory Method and implement the factory method)
+* The Factory Method Pattern defines an interface for creating an object, but lets subclasses decide which class to instantiate. Factory Method lets a class defer instantiation to subclasses. (Use this to decouple your client code from the concrete classes you need to instantiate, or you don't know ahead of time all the concrete classes you are going to need. Just subclass Factory Method and implement the factory method) (Subclasses decide which concrete classes to create)
 
 * In design patterns, the phrase "implement an interface" does NOT alsways mean "write a class that implements a Java interface, by using the 'implements' keyword in the class declaration". In the general use of this phrase, a conrete class implementing a smethod from a supertype(which could be a class OR interface) is still considered to be "implementing the interface" of that supertype.
 
@@ -243,4 +244,11 @@ doing the translation.
 
 * There are actually two kinds of adapters: object adapters(using composition) and class adapters(using multiple inheritance to implement, very rare in Java).
 
-* Example: Duck-Turkey, Enumeration(no remove() method)-Iterator(with remove() method), 
+* Example: Duck-Turkey, Enumeration(no remove() method)-Iterator(with remove() method)
+
+
+### `Template`
+
+* The Template Method Pattern defines the skeleton of an algorithm in a method, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure. (Encapsulate interchangeable behaviors and use delegation to decide which behavior to use)
+
+* Example: Coffee/Tea preparing, Most Frameworks(gets something done and leave others to be specified by you)

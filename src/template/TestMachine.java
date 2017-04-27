@@ -20,6 +20,12 @@ public class TestMachine {
 		myCoffee.brew();
 		myCoffee.pourInCup();
 		myCoffee.addCondiments();
+		
+		System.out.println("********");
+		
+		//Custom Coffee
+		CoffeeWithHook coffeeHook = new CoffeeWithHook();
+		coffeeHook.prepareReceipe();
 	}
 
 }
