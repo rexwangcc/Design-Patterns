@@ -11,12 +11,13 @@
 7. Depend upon abstractions, do not depend upon conrete classes.
 8. Principle of Least Knowledge talk only to your immediate friends. (When designing a system, for any object be careful of the numbter of classes it interacts with and also how it comes to interact with those classes)
 9. Don't call us, we'll call you. (High-level components give the low-level components this principle)
+10. A class should have only one reason to change.
 
 ## Design Patterns
 
 ### `Strategy`
 
-* The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it. (Subclasses decide how to implement steps in an algorithm)
+* The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary independently from clients that use it. (Encapsulate interchangeable behaviors and use delegation to decide which behavior to use)
 
 * Example: Duck Simulator
 
@@ -249,6 +250,18 @@ doing the translation.
 
 ### `Template`
 
-* The Template Method Pattern defines the skeleton of an algorithm in a method, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure. (Encapsulate interchangeable behaviors and use delegation to decide which behavior to use)
+* The Template Method Pattern defines the skeleton of an algorithm in a method, deferring some steps to subclasses. Template Method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure. (Subclasses decide how to implement steps in an algorithm)
 
 * Example: Coffee/Tea preparing, Most Frameworks(gets something done and leave others to be specified by you)
+
+### `Iterator`
+
+* The Iterator Pattern provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation. 
+
+### `Composite`
+
+* The Composite Pattern allows you to compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
+
+### `State`
+
+* The State Pattern allows an object to alter its behavior when its internal state changes. The object will appear to change its class.
