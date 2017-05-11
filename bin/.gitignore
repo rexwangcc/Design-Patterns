@@ -1,0 +1,14 @@
+/.DS_Store
+/adapter/
+/command/
+/decorator/
+/iterator/
+/multithread_singleton/
+/observer/
+/observer_java_builtin/
+/simple_factory/
+/singleton/
+/state/
+/state_naive/
+/strategy/
+/template/
