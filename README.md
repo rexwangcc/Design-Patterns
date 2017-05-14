@@ -258,9 +258,41 @@ doing the translation.
 
 * The Iterator Pattern provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation. 
 
+* Start from Java 5, there is an improved loop statement to iterate over a collection or an array without creating an iterator explicitly:
+
+```java
+for (Object obj: collection){
+    // Do something about obj
+    ...
+}
+```
+
+* The NULL Iterator: handle that a collection has nothing to iterate over:
+
+```java
+import java.util.Iterator
+
+public class NullIterator implements Iterator{
+    public Object next(){
+        return null;
+    }
+    public boolean hasNExt(){
+        return false;
+    }
+    public void remove(){
+        throw new UnsupportedOperationException();
+    }
+}
+```
+
+
+* Example: Waitress iterates Menu, java.util.Iterator
+
 ### `Composite`
 
 * The Composite Pattern allows you to compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.
+
+* Use this pattern means you have a collections of objects with whole-part relationships and you want to treat those objects uniformly, with 'transparency'.
 
 ### `State`
 
