@@ -297,3 +297,11 @@ public class NullIterator implements Iterator{
 ### `State`
 
 * The State Pattern allows an object to alter its behavior when its internal state changes. The object will appear to change its class.
+
+### `Proxy`
+
+* The Proxy Pattern provides a surrogate or placeholder for another object to control access to it.
+
+### `Compound`
+
+* 
