@@ -12,6 +12,7 @@
 8. Principle of Least Knowledge talk only to your immediate friends. (When designing a system, for any object be careful of the numbter of classes it interacts with and also how it comes to interact with those classes)
 9. Don't call us, we'll call you. (High-level components give the low-level components this principle)
 10. A class should have only one reason to change.
+11. A Pattern is a solution to a problem in a context.
 
 ## Design Patterns
 
@@ -304,4 +305,6 @@ public class NullIterator implements Iterator{
 
 ### `Compound`
 
-* 
+* A Compound Pattern combines two or more patterns into a solution that solves a recurring or general problem.
+
+* MVC is the most popular compound pattern (Involved with Strategy, Observer and Composite)
